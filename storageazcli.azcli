@@ -24,7 +24,7 @@ az group list --query [].name
 
 # Create the blank template
 $templateFile = 'mnazuretemplate.json'
-$templateName = 'parametertemplate'
+$templateName = 'functiontemplate'
 $storageName = 'mnpstorage123456'
 
 # Create StorageAccount with parameters StorageName give SKU not given
@@ -40,6 +40,14 @@ az group deployment create `
     --resource-group $rgName `
     --template-file $templateFile `
     --parameters storageName=$storageName storageSku='Standard_GRS'
+
+# Create StorageAccount without providing the location (Using Function Template)
+az group deployment create `
+    --name $templateName `
+    --resource-group $rgName `
+    --template-file $templateFile `
+    --parameters storageName=$storageName
+
 
 # delete a group
 az group delete --name $rgName --no-wait --yes
