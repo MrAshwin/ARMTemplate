@@ -24,7 +24,7 @@ az group list --query [].name
 
 # Create the blank template
 $templateFile = 'mnazuretemplate.json'
-$templateName = 'blanktemplate'
+$templateName = 'resourcetemplate'
 
 az group deployment create `
     --name $templateName `

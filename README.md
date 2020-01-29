@@ -11,6 +11,7 @@
 ## Git Branch List
 
 - 01BlankTemplate
+- 02Resources
 
 ## Git Remote (Github/Gitlab)
 
