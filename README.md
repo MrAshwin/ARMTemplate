@@ -14,6 +14,7 @@
 - 02Resources
 - 03Parameters
 - 04TemplateFunctions
+- 05Variables
 
 ## Git Remote (Github/Gitlab)
 

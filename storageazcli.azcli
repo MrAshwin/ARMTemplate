@@ -48,6 +48,15 @@ az group deployment create `
     --template-file $templateFile `
     --parameters storageName=$storageName
 
+# Create a storage account using the variable template
+$templateName = 'variabletemplate'
+$storagePrefix = 'mnstorage'
+
+az group deployment create `
+    --name $templateName `
+    --resource-group $rgName `
+    --template-file $templateFile `
+    --parameters storagePrefix=$storagePrefix
 
 # delete a group
 az group delete --name $rgName --no-wait --yes
