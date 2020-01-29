@@ -8,10 +8,12 @@
 
 - git checkout -b "Branch Name"
 
-## Gti Branch List
+## Git Branch List
 
-- 
+- 01BlankTemplate
 
 ## Git Remote (Github/Gitlab)
 
 - git remote add <url>
+
+git config --global User.Name 'Maheshkumar N' User.Email 'pn.maheshkumar@gmail.com'
