@@ -24,12 +24,22 @@ az group list --query [].name
 
 # Create the blank template
 $templateFile = 'mnazuretemplate.json'
-$templateName = 'resourcetemplate'
+$templateName = 'parametertemplate'
+$storageName = 'mnpstorage123456'
 
+# Create StorageAccount with parameters StorageName give SKU not given
 az group deployment create `
     --name $templateName `
     --resource-group $rgName `
-    --template-file $templateFile
+    --template-file $templateFile `
+    --parameters storageName=$storageName
+
+# Create StorageAccount with parameters StorageName give, SKU wrongly given
+az group deployment create `
+    --name $templateName `
+    --resource-group $rgName `
+    --template-file $templateFile `
+    --parameters storageName=$storageName storageSku='Standard_GRS'
 
 # delete a group
 az group delete --name $rgName --no-wait --yes
