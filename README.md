@@ -12,6 +12,7 @@
 
 - 01BlankTemplate
 - 02Resources
+- 03Parameters
 
 ## Git Remote (Github/Gitlab)
 
